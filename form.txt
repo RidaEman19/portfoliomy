@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+   
+    </style>
+
+</head>
+<body>
+
+
+    <form action="">
+        <input type="text" placeholder="enter username" required>
+        <br>
+        <input type="email" placeholder="enter username" required>
+        <br>
+        <input type="password" placeholder="enter username" required>
+        <br>
+        <input type="date" placeholder="enter username" required>
+        <br>
+        <input type="color" placeholder="enter username" required>
+        <br>
+        <input type="time" placeholder="enter username" required>
+        <br>
+        <input type="radio" name="radio" placeholder="enter username" required>
+        <br>
+        <input type="radio"  name="radio" placeholder="enter username" required>
+        <br>
+        <input type="checkbox" placeholder="enter username" required>
+        <br>
+        <input type="tel" placeholder="+923xx-xxxxxxx"  pattern="^\+92[3][0-9]{2}-[0-9]{7}$"  required>
+        <br>
+        <button type="submit">register</button>
+    
+    </form>
+<!-- 
+    <h1>rida</h1> 
+<h2>rida</h2>
+<h3>rida</h3>
+<h4>rida</h4>
+<h5>rida</h5>
+<h6>rida</h6> -->
+
+
+
+
+<i class="fa fa-instagram"></i>
+<i class="fa fa-instagram"></i>
+<i class="fa fa-facebook" aria-hidden="true">ghjgh</i>
+<br>
+<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+<i class="fa fa-address-book" aria-hidden="true"></i>
+<i class="fa fa-twitter" aria-hidden="true"></i>
+<i class="fa fa-whatsapp" aria-hidden="true"></i>
+<i class="fa-solid fa-heart" aria-hidden="true"></i>
+<i class="fa-regular fa-heart" aria-hidden="true"></i>
+
+
+
+
+    <p style="
+            font-size: 20px;
+            color:rgb(250, 244, 244);
+            text-transform: uppercase;
+            font-weight: 700;
+            text-indent: 40px;
+        font-family:'Times New Roman', Times, serif;
+            background-color: rgb(34, 107, 107);
+        ">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores reiciendis, doloribus porro obcaecati aut non voluptates autem magnam ratione quasi ex vel laborum cupiditate doloremque eum odit pariatur in vitae quisquam vero voluptatibus impedit nam aperiam. Doloribus a, expedita soluta consequatur ad aperiam velit ut ipsum repellat quidem delectus illum?
+    </p>
+
+
+    <p>
+        rida
+    </p>
+
+
+    <a href="index.html" style="text-decoration: none;">home</a>
+
+</body>
+</html>

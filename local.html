@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<form action="#">
+  <div id="mainmessage"></div>
+
+  <input type="email" id="myemail" placeholder="Email" required>
+  <div id="emailmessage"></div>
+  <br>
+
+  <input type="password" id="mypass" placeholder="Password" required>
+  <div id="passmessage"></div>
+
+  <button type="button" onclick="showpass()">
+    <span><i class="fa fa-eye" id="icon" aria-hidden="true"></i></span>
+  </button>
+
+  <br><br>
+  <button type="button" onclick="register()">Register</button>
+</form>
+
+<script>
+function register(){
+  var emailField = document.getElementById("myemail");
+  var passField = document.getElementById("mypass");
+  var email = emailField.value.trim();
+  var password = passField.value.trim();
+
+  var emailmessage = document.getElementById("emailmessage");
+  var passmessage = document.getElementById("passmessage");
+  var mainmessage = document.getElementById("mainmessage");
+  emailmessage.textContent = "";
+  passmessage.textContent = "";
+  mainmessage.textContent = "";
+
+   if(email=="" && password==""){
+      emailmessage.textContent="fill your email"
+      passmessage.textContent="fill your password"
+
+    }
+    else if(email=="" || password==""){
+        if(email==""){
+      emailmessage.textContent="fill your email"
+        }
+        else{
+              passmessage.textContent="fill your password"
+  
+        }
+    }
+
+ else if(email && password){
+        if(password.length<8){
+              passmessage.textContent="password must have 8 values"
+        }
+        else if(password.length>=8){       
+        let capital = /[A-Z]/.test(password);
+  let special = /[@!#$%^]/.test(password);
+  if(!capital || !special){
+    passmessage.textContent = "Password must contain 1 capital letter and 1 special character";
+    return;
+  }
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const exist = users.some(user => user.email === email);
+  if(exist){
+    mainmessage.textContent = "Email already exists";
+    return;
+  }
+  users.push({ email, password });
+  localStorage.setItem("users", JSON.stringify(users));
+  mainmessage.textContent = "Registered successfully!";
+  window.location.href="login.html"
+        }  
+    }   
+
+}
+
+function showpass(){
+  var passfield = document.getElementById("mypass");
+  var icon = document.getElementById("icon");
+  if(passfield.type === "password"){
+    passfield.type = "text";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else {
+    passfield.type = "password";
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
+  }
+}
+</script>
+
+</body>
+</html>

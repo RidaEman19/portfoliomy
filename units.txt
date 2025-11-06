@@ -1,0 +1,24 @@
+Absolute Units:
+These have a fixed size regardless of screen size or user settings.
+•px (Pixels)
+	Represents a single dot on the screen (a pixel).
+	Commonly used; consistent across screens (though technically relative to device resolution).
+•pt (Points)
+	1pt = 1/72 of an inch.
+	Mostly used in print stylesheets, not ideal for screens.
+•pc (Picas)
+	1pc = 12pt = 1/6 of an inch.
+	Rare in web design; used more in print design.
+
+Relative Units:
+This scale based on other elements or settings.
+•rem (Root em)
+	Relative to the root element’s (<html>) font size.
+	Example: If html { font-size: 16px }, then 1rem = 16px.
+•em
+	Relative to the current element's font size.
+	Can compound if nested — e.g., 1.2em inside a 1.2em element becomes larger.
+•% (Percent)
+	Relative to the parent element's size (width, height, font size, etc.).
+	Example: width: 50% means half the width of the parent.
+

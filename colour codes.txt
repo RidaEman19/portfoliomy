@@ -1,0 +1,24 @@
+RGB (Red, Green, Blue)              
+Red = rgb(255, 0, 0) or #FF0000
+Use: Screens (web, TV, phones)
+
+Hexadecimal (Hex)
+#RRGGBB
+Use: Web design (HTML, CSS)
+Blue = #0000FF          
+
+RGBA (RGB + Alpha for transparency)
+rgba(255, 0, 0, 0.5)
+Use: Web design, graphic editors
+
+HSL (Hue, Saturation, Lightness)
+hsl(120, 100%, 50%)
+Use: Easier to tweak colors by tone or brightness
+
+HSLA (HSL + Alpha)
+hsla(120, 100%, 50%, 0.5)
+Use: Like RGBA, but HSL-based for easy color tweaking
+
+CMYK (Cyan, Magenta, Yellow, Key/Black)
+cmyk(0%, 100%, 100%, 0%)
+Use: Printing (paper, packaging)

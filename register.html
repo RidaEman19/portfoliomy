@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="new.js"></script>
+</head>
+<body>
+    
+        <input type="text" id="username" placeholder="Username" required>
+        <br>
+        <input type="email" id="myemail" placeholder="Email" required>
+        <br>
+        <input type="password" id="mypassword" placeholdeCr="Password" required>
+        <button type="button" onclick="registerfunc()"><span id="myid"> hide</span></button>
+        <button type="submit" onclick="register()">Register</button>
+        <button type="button" onclick="login()">Login</button>
+    
+    <script>
+        function register() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("myemail").value;
+            var password = document.getElementById("mypassword").value;
+
+            
+
+            if (email === "" || password === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+const users = JSON.parse(localStorage.getItem("users"))  || [];
+const exist = users.some(user=>user.email ===email);
+if(exist){
+    alert("email already exist");
+    return;
+}
+users.push({username,email,password})
+localStorage.setItem("users",JSON.stringify(users));
+alert("registered")
+window.location.href= "login.html"
+
+
+        }
+
+        function registerfunc() {
+            var passwordField = document.getElementById("mypassword");
+            var icon = document.getElementById("myid");
+
+            if (passwordField.type === "password") {
+                icon.textContent = "hide"
+                passwordField.type = "text";
+            } else {
+                icon.textContent = "show"
+
+                passwordField.type = "password";
+            }
+        }
+
+      
+    </script>
+</body>
+</html>

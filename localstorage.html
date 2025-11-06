@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="new.js"></script>
+   
+</head>
+
+<body>
+   <script>
+
+
+
+    function goori(){
+        
+
+var aptech = document.getElementById("myemail").value;
+var password = document.getElementById("mypassword").value;
+alert(aptech)
+        if(aptech ==="" || password ===""){
+                alert("fill your form")
+        }
+       
+        else if(aptech  && password){
+                alert("login")
+        }
+
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+      const userExists = users.some(user => user.email === aptech);
+      if (userExists) {
+        alert("This email is already registered.");
+        return;
+      }
+      users.push({ aptech, password });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Registration successful! You can now log in.");
+
+      
+    }
+
+    function goorifunc(){
+        var fieldchange = document.getElementById("mypassword");
+        var showpass = document.getElementById("action");
+        
+        if(fieldchange.type === "password"){
+            fieldchange.type="text";
+            showpass.innerHTML = "Hide";
+
+        }
+        else{
+            pass.type="password";
+            showpass.innerHTML="show";
+        }
+
+
+     
+     
+    }
+
+   </script>
+
+
+<form action="">
+    <input type="email"  id="myemail">
+    <br>
+    <input type="password"  id="mypassword">
+
+    <button type="button"  onclick="goorifunc()">
+       
+        <p id="action"><i class="fa fa-address-book" aria-hidden="true"></i></p>
+
+    </button>
+    <button onclick="goori()">login</button>
+</form>
+
+</body>
+
+</html>
